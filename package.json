@@ -1,0 +1,46 @@
+{
+  "name": "misa-files-fe",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite --port 8001 --strictPort",
+    "dev": "vite --port 8001",
+    "devBuild": "vite build --watch & vite preview",
+    "serve": "vite preview",
+    "build": "vite build",
+    "lint": "eslint .",
+    "check": "npm run lint",
+    "preview": "vite preview",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "antd": "^5.24.8",
+    "dotenv": "^16.5.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.5.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.5.1",
+    "vite-plugin-commonjs": "^0.10.4",
+    "vite-tsconfig-paths": "^5.1.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@module-federation/vite": "^1.2.6",
+    "@types/node": "^22.14.1",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@typescript-eslint/parser": "^8.29.1",
+    "@vitejs/plugin-react-swc": "^3.8.0",
+    "eslint": "^9.22.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.26.1",
+    "vite": "^6.3.1"
+  }
+}
