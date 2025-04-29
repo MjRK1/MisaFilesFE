@@ -41,10 +41,10 @@ export default defineConfig({
     target: 'esnext'
   },
   server: {
-    port: 8001
+    port: Number(process.env.PORT || 8001)
   },
   preview: {
-    port: 8001,
+    port: Number(process.env.PORT || 8001),
     allowedHosts: ['misaserver.ru', 'localhost']
   },
   base: '/',
