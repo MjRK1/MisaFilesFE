@@ -51,7 +51,7 @@ export default defineConfig({
     host: process.env.HOST || 'localhost',
     allowedHosts: ['misaserver.ru', 'localhost']
   },
-  base: '/',
+  base: '/files',
   build: {
     modulePreload: false,
     target: 'esnext',
