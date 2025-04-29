@@ -9,12 +9,11 @@ export const RouteLayout = ({user, accessToken, refreshToken}: any) => {
     if (setUser && user) setUser({ ...user });
     if (setAccessToken) setAccessToken(accessToken);
   }, [user, setUser]);
-
   return (
     <div className="mf-route-layout">
-      <main>
+      <div className="mf-route-layout__main">
         <Outlet />
-      </main>
+      </div>
     </div>
   );
 };

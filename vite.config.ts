@@ -27,6 +27,9 @@ export default defineConfig({
         },
         'antd': {
           singleton: true,
+        },
+        'dayjs': {
+          singleton: true,
         }
       },
     })

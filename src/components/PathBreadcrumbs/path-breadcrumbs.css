@@ -1,0 +1,23 @@
+.files-bread-crumbs {
+    display: flex;
+}
+.bread-crumbs__bread-crumb-item {
+    display: flex;
+    margin-right: 10px;
+    user-select: none;
+}
+.bread-crumbs__bread-crumb-item--active {
+    color: var(--color-lion);
+    cursor: default;
+}
+.bread-crumbs__bread-crumb-item--active > .bread-crumb-item__title:hover {
+    color: var(--color-lion);
+}
+.bread-crumb-item__title {
+    margin-right: 10px;
+    transition: .2s;
+    cursor: pointer;
+}
+.bread-crumb-item__title:hover {
+    color: var(--color-ecru);
+}

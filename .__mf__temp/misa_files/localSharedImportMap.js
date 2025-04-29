@@ -8,8 +8,18 @@
           return pkg
         }
       ,
+        "antd": async () => {
+          let pkg = await import("__mf__virtual/misa_files__prebuild__antd__prebuild__.js")
+          return pkg
+        }
+      ,
         "react": async () => {
           let pkg = await import("__mf__virtual/misa_files__prebuild__react__prebuild__.js")
+          return pkg
+        }
+      ,
+        "dayjs": async () => {
+          let pkg = await import("__mf__virtual/misa_files__prebuild__dayjs__prebuild__.js")
           return pkg
         }
       ,
@@ -47,6 +57,32 @@
             }
           }
         ,
+          "antd": {
+            name: "antd",
+            version: "5.24.8",
+            scope: ["default"],
+            loaded: false,
+            from: "misa_files",
+            async get () {
+              usedShared["antd"].loaded = true
+              const {"antd": pkgDynamicImport} = importMap 
+              const res = await pkgDynamicImport()
+              const exportModule = {...res}
+              // All npm packages pre-built by vite will be converted to esm
+              Object.defineProperty(exportModule, "__esModule", {
+                value: true,
+                enumerable: false
+              })
+              return function () {
+                return exportModule
+              }
+            },
+            shareConfig: {
+              singleton: true,
+              requiredVersion: "^5.24.8"
+            }
+          }
+        ,
           "react": {
             name: "react",
             version: "19.1.0",
@@ -70,6 +106,32 @@
             shareConfig: {
               singleton: true,
               requiredVersion: "^19.1.0"
+            }
+          }
+        ,
+          "dayjs": {
+            name: "dayjs",
+            version: "1.11.13",
+            scope: ["default"],
+            loaded: false,
+            from: "misa_files",
+            async get () {
+              usedShared["dayjs"].loaded = true
+              const {"dayjs": pkgDynamicImport} = importMap 
+              const res = await pkgDynamicImport()
+              const exportModule = {...res}
+              // All npm packages pre-built by vite will be converted to esm
+              Object.defineProperty(exportModule, "__esModule", {
+                value: true,
+                enumerable: false
+              })
+              return function () {
+                return exportModule
+              }
+            },
+            shareConfig: {
+              singleton: true,
+              requiredVersion: "^1.11.13"
             }
           }
         ,
@@ -101,14 +163,6 @@
         
     }
       const usedRemotes = [
-                {
-                  entryGlobalName: "http://localhost:8000/core/remoteEntry.js",
-                  name: "core",
-                  type: "var",
-                  entry: "http://localhost:8000/core/remoteEntry.js",
-                  shareScope: "default",
-                }
-          
       ]
       export {
         usedShared,

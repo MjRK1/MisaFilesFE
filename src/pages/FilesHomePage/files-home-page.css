@@ -1,0 +1,64 @@
+.files-home-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    height: 100%;
+    position: relative;
+}
+
+.files-home-page {
+    width: 100%;
+    padding-top: 20px;
+    max-height: 700px;
+    overflow-y: auto;
+    height: 100%;
+}
+.files-home-page__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.files-home-page__current-folder-name {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    font-size: var(--font-size22);
+    color: var(--color-ecru);
+    font-weight: 500;
+    margin-bottom: 20px;
+    user-select: none;
+    border-radius: 10px;
+    transition: .2s;
+}
+.current-folder-name__back-icon {
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    font-size: var(--font-size22);
+    margin-right: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: .2s;
+}
+.draggable-file {
+    z-index: 10;
+}
+.files-home-page__content-list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+}
+.files-home-page__folder-list {
+    display: flex;
+    align-items: start;
+}
+.files-home-page__files-list {
+    display: flex;
+}

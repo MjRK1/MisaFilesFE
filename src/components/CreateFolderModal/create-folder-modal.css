@@ -1,0 +1,12 @@
+.create-folder-modal {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.create-field__create-field-title {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.create-folder-modal__error-text {
+    color: var(--color-red);
+}

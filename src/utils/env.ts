@@ -14,13 +14,13 @@ function getHostname() {
   if (isLocalhost || isTestBuild()) {
     return {
       protocol: 'http:',
-      hostname: 'localhost:5001',
+      hostname: 'localhost:5002',
     };
   }
 
   return {
     protocol: CURRENT_PROTOCOL,
-    hostname: `api.${CURRENT_HOSTNAME}/core/`,
+    hostname: `api.${CURRENT_HOSTNAME}/files/`,
   };
 }
 export const { protocol, hostname } = getHostname();
