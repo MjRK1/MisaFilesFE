@@ -1,12 +1,14 @@
 import './App.css';
 import React from 'react';
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes, useParams } from 'react-router-dom';
 import { FilesHomePage } from 'pages/FilesHomePage';
 import AuthDataProvider from 'hooks/AuthProvider';
 import { RouteLayout } from 'common/RouteLayout';
 import { ConfigProvider } from 'antd';
 
 const App = ({user, accessToken, refreshToken}: any) => {
+  const { moduleName } = useParams();
+  if (moduleName !== 'MisaFiles') return;
   return (
     <AuthDataProvider>
       <ConfigProvider
@@ -74,7 +76,7 @@ const App = ({user, accessToken, refreshToken}: any) => {
             element={<RouteLayout user={user} accessToken={accessToken} refreshToken={refreshToken} />}
           >
             <Route path='/home/*' element={<FilesHomePage />} />
-            <Route path='/' element={<Navigate to='/core/modules/MisaFiles/home' replace />} />
+            <Route path='/' element={<Navigate to='/core/modules/MisaFiles/home' />} />
           </Route>
         </Routes>
       </ConfigProvider>
